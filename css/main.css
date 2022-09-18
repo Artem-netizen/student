@@ -2876,6 +2876,10 @@ a.user__title {
 .reviews-row {
   margin-bottom: 24px;
   gap: 24px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 24px;
 }
 .reviews-row:last-child {
   margin-bottom: 0;
