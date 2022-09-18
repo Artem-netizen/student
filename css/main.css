@@ -675,7 +675,13 @@ footer {
 .form-input::placeholder {
   color: rgba(17, 17, 17, 0.4);
 }
+.form-input:not([type=email]) {
+  padding-right: 40px;
+}
 
+.hint {
+  position: relative;
+}
 .hint-ranks {
   position: absolute;
   right: -2px;
@@ -717,13 +723,14 @@ footer {
 .hint-ranks__content {
   padding: 6px 12px;
   position: absolute;
-  right: -37px;
+  left: 13px;
   bottom: 24px;
   z-index: 1;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   pointer-events: none;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1649,9 +1656,12 @@ footer {
 }
 .sidebar__user-img {
   margin-right: 12px;
-  position: relative;
 }
 .sidebar__user-avatar {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -2134,9 +2144,6 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.popup__label {
-  position: relative;
-}
 .popup-form-controls {
   margin-bottom: 24px;
   padding: 20px;
@@ -2146,20 +2153,16 @@ footer {
   border: 1px solid rgba(17, 17, 17, 0.03);
 }
 .popup-form-group {
+  position: relative;
   padding: 16px 0;
   border-bottom: 1px solid rgba(17, 17, 17, 0.05);
 }
 .popup-form-group .icon-eye {
   position: absolute;
-  top: 50%;
   right: 0;
   width: 24px;
   height: 24px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  background-color: #ffffff;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -572,93 +572,100 @@ footer {
     &::placeholder {
         color: $black40;
     }
+    &:not([type="email"]) {
+        padding-right: 40px;
+    }
 }
 
 // чины помогающих
-.hint-ranks {
-    position: absolute;
-    right: -2px;
-    bottom: -2px;
-    z-index: 1;
-    width: 16px;
-    height: 16px;
-    display: block;
-    color: $accent;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 20px;
-    border-width: 2px;
-    border-radius: 4px;
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-
-    &.phd {
-        background: $turquoise;
-        border-color: $turquoise;
-    }
-
-    &.master {
-        background: #CAC1FA;
-        border-color: #B9ACF4;
-    }
-
-    &.specialist {
-        background: $white;
-        border-color: #A0A0A0;
-    }
-
-    &__content {
-        padding: 6px 12px;
+.hint {
+    position: relative;
+    &-ranks {
         position: absolute;
-        right: -37px;
-        bottom: 24px;
+        right: -2px;
+        bottom: -2px;
         z-index: 1;
-        opacity: 0;
-        transition: .3s;
-        pointer-events: none;
+        width: 16px;
+        height: 16px;
+        display: block;
+        color: $accent;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 20px;
+        border-width: 2px;
+        border-radius: 4px;
+        border-style: solid;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #67676c;
-        border-radius: 8px;
-        line-height: 18px;
-        font-weight: 500;
-        font-size: 13px;
-        color: $white;
-        transform: translateY(10px);
-        -webkit-transform: translateY(10px);
-        -moz-transform: translateY(10px);
-        -ms-transform: translateY(10px);
-        -o-transform: translateY(10px);
-
-        &::before {
-            content: '';
+        text-transform: uppercase;
+    
+        &.phd {
+            background: $turquoise;
+            border-color: $turquoise;
+        }
+    
+        &.master {
+            background: #CAC1FA;
+            border-color: #B9ACF4;
+        }
+    
+        &.specialist {
+            background: $white;
+            border-color: #A0A0A0;
+        }
+    
+        &__content {
+            padding: 6px 12px;
             position: absolute;
-            bottom: -5px;
-            left: 20px;
+            left: 13px;
+            bottom: 24px;
             z-index: 1;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 6px 5px 0 5px;
-            border-color: #67676c transparent transparent transparent;
+            opacity: 0;
+            transition: .3s;
+            pointer-events: none;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #67676c;
+            border-radius: 8px;
+            line-height: 18px;
+            font-weight: 500;
+            font-size: 13px;
+            color: $white;
+            transform: translateY(10px);
+            -webkit-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+            -ms-transform: translateY(10px);
+            -o-transform: translateY(10px);
+    
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 20px;
+                z-index: 1;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 5px 0 5px;
+                border-color: #67676c transparent transparent transparent;
+            }
         }
-    }
-
-    &:hover {
-        &~.hint-ranks__content {
-            opacity: 1;
-            pointer-events: all;
-            transform: translateY(0px);
-            -webkit-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-            -o-transform: translateY(0px);
+    
+        &:hover {
+            &~.hint-ranks__content {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0px);
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                -o-transform: translateY(0px);
+            }
         }
-    }
+    } 
 }
 
 // рейтинг

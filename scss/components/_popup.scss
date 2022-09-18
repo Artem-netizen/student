@@ -104,10 +104,6 @@
         }
     }
 
-    &__label {
-        position: relative;
-    }
-
     &-form {
         &-controls {
             margin-bottom: 24px;
@@ -120,20 +116,16 @@
 
         
         &-group {
+            position: relative;
             padding: 16px 0;
             border-bottom: 1px solid $black5;
 
             .icon-eye {
                 position: absolute;
-                top: 50%;
                 right: 0;
                 width: 24px;
                 height: 24px;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
+                background-color: $white;
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
